@@ -74,6 +74,11 @@ header {
 
 }
 
+.trabajadores{
+        color: #429639;
+        font-family: "Lucida Console", "Courier New", monospace;
+}
+
 /* INDEX - FOTO DE PAGINA PRINCIPAL*/
 
 .fotointro img{
@@ -107,10 +112,11 @@ header {
 
 /* INDEX - MAS TATI*/
 
+/*
 .mastati{
     margin: 10px 10px 20px 10px;
-
 }
+*/
 
 .mastati :link{
     color: white;
@@ -123,6 +129,11 @@ header {
 
 }
 
+.recetas{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
 
 /* INDEX - FOOTER*/
 
@@ -236,10 +247,24 @@ body {
     background-color: #d2dbe2;
 }
 
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
 
 /*INDEX GRID */
 
-
+/*
 .pagprincipal{
     display: grid;
     grid-template-columns: 1fr 1fr; 
@@ -281,8 +306,10 @@ body {
     grid-area: footer;
 }
 
-/*SHOP GRID - Desktop*/
+*/
 
+/*SHOP GRID - Desktop*/
+/*
 .pagshop{
     display: grid;
     grid-template-columns: 1fr 1fr; 
@@ -329,28 +356,32 @@ body {
 
 }
 
-.ShopFotoT1 img{
-    width: 48%;
 
-}
 
 .ShopTiendas2{
     grid-area: ShopTiendas2;
     margin-left:10px;
 }
 
-.ShopFotoT2{
-    grid-area: ShopFotoT2;
-}
 
-.ShopFotoT2 img{
-    width: 48%;
-}
+
+
 
 .footer {
     grid-area: footer;
 }
+*/
 
+/*
+.ShopFotoT1 img{
+    width: 99%;
+
+}
+
+.ShopFotoT2 img{
+    width: 99%;
+}
+*/
 
 /*INDEX TABLET */
 
@@ -465,7 +496,7 @@ body {
     .comentarios{
         text-align: center;
     }
-
+    /*
     .pagshop{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(9, 0.1fr);
@@ -480,6 +511,7 @@ body {
 
         ;
     }
+    */
     
     .ShopFotoT1{
         display: none;
@@ -491,6 +523,7 @@ body {
     .footer{
         padding-bottom: 10px;
     }
+
     }
 
 

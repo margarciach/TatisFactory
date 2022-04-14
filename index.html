@@ -9,6 +9,8 @@
     <link rel="shortcut icon" href="multimedia/logo.ico" type="image/x-icon">
     <title>Tatis Factory</title>
 
+    <link rel="stylesheet" href="css/bootstrap.min.css">  
+
     <link rel="stylesheet" href="estilos/estilos.css">
 
 </head>
@@ -26,10 +28,10 @@
         </table>
     </header>
 
-    <div class="pagprincipal">
+    <div class="container-fluid">
 
-        <nav class="navmenu">
-            <ul class="navmenuelement">
+        <nav class="row navmenu">
+            <ul class="col-12 navmenuelement">
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="paginas/tati.html">TATI</a></li>
                 <li><a href="paginas/shop.html">SHOP</a></li>
@@ -38,18 +40,31 @@
             </ul>
         </nav>
 
-        <section class="fotointro">
-            <img src="multimedia/galletasintro.png">
+        <!-- <section class="row fotointro">
+            <img class="col-12" src="multimedia/galletasintro.png">
 
-        </section>
+        </section> -->
 
-        <section class="comprar">
+        <div id="carouselExampleSlidesOnly" class="row carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="multimedia/galletasintro.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="multimedia/store.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+
+        <section class="row">
+
+        <section class="col-lg-6 col-md-6 col-sm-12 comprar">
             <p>PARA COMPRAR</p>
             <p>HAGA CLICK</p>
             <a href="paginas/shop.html">AQUI</a>
         </section>
 
-        <section class="mastati">
+        <section class="col-lg-6 col-md-6 col-sm-12 mastati">
             <h3>TODO SOBRE TATI</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab perferendis possimus facilis, adipisci
                 officia
@@ -75,13 +90,15 @@
             <a href="paginas/tati.html">AQUI</a>
         </section>
 
-        <section class="comentarios">
-            <h3>COMENTARIOS DEL PUBLICO</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur dignissimos nulla unde explicabo
+        </section>
+
+        <section class="row comentarios">
+            <h3 class="col-12">COMENTARIOS DEL PUBLICO</h3>
+            <p class="col-12">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur dignissimos nulla unde explicabo
                 dolorum veniam, enim dolore officiis praesentium at! Dolorem asperiores ip</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur dignissimos nulla unde explicabo
+            <p class="col-12">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur dignissimos nulla unde explicabo
                 dolorum veniam, enim dolore officiis praesentium at! Dolorem asperiores ip</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur dignissimos nulla unde explicabo
+            <p class="col-12">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur dignissimos nulla unde explicabo
                 dolorum veniam, enim dolore officiis praesentium at! Dolorem asperiores ip</p>
         </section>
 
@@ -98,7 +115,7 @@
 
 
 
-        <footer class="footer">
+        <footer class="row footer">
             <a href="index.html">HOME</a>
             <a href="paginas/tati.html">TATI</a>
             <a href="paginas/shop.html">SHOP</a>
@@ -107,6 +124,8 @@
         </footer>
 
     </div>
+
+    <script src="js/bootstrap.min.js"></script>
 
 </body>
 

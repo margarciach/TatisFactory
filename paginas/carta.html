@@ -8,6 +8,7 @@
 
     <link rel="shortcut icon" href="../multimedia/logo.ico" type="image/x-icon">
     <title>Tati's Factory</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../estilos/estilos.css">
 
 </head>
@@ -25,29 +26,70 @@
         </table>
     </header>
 
-    <nav class="navmenu">
-        <ul class="navmenuelement">
-            <li><a href="../index.html">HOME</a></li>
-            <li><a href="tati.html">TATI</a></li>
-            <li><a href="shop.html">SHOP</a></li>
-            <li><a href="carta.html">CARTA</a></li>
-            <li><a href="contacto.html">CONTACTO</a></li>
-        </ul>
-    </nav>
-
-    <h2>CARTA</h2>
-
-    <iframe src="../multimedia/CartaNov.pdf" width="99%" height="400"></iframe>
+    <div class="container-fluid">
 
 
-    <footer>
-        <a href="../index.html">HOME</a>
-        <a href="tati.html">TATI</a>
-        <a href="shop.html">SHOP</a>
-        <a href="carta.html">CARTA</a>
-        <a href="contacto.html">CONTACTO</a>
-    </footer>
+        <nav class="row navmenu">
+            <ul class="navmenuelement">
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="tati.html">TATI</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="carta.html">CARTA</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
 
+        <section class="row">
+            <h2>CARTA</h2>
+
+            <iframe src="../multimedia/CartaNov.pdf" width="99%" height="400"></iframe>
+        </section>
+
+        <section class="row">
+            <h3>NUESTROS TRABAJADORES</h3>
+
+            <table class="table table-striped trabajadores">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <footer class="row">
+            <a href="../index.html">HOME</a>
+            <a href="tati.html">TATI</a>
+            <a href="shop.html">SHOP</a>
+            <a href="carta.html">CARTA</a>
+            <a href="contacto.html">CONTACTO</a>
+        </footer>
+
+    </div>
+
+    <script src="../js/bootstrap.min.js"></script>
 
 </body>
 
