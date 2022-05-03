@@ -5,6 +5,10 @@ p {
     font-family: "Lucida Console", "Courier New", monospace;
 }
 
+p:hover {
+    color: #0081c7;
+}
+
 ul {
     list-style-type: none;
 }
@@ -15,6 +19,10 @@ h1 {
     font-size: 300%;
 }
 
+h1:hover {
+    color: orange;
+}
+
 h2 {
     color: #6daedf;
     font-family: "Lucida Console", "Courier New", monospace;
@@ -23,15 +31,55 @@ h2 {
 
 }
 
+h2:hover {
+    color: orange;
+}
+
+@keyframes tercero {
+    0% {
+        transform: rotate(90deg)
+    }
+
+    20% {
+        transform: rotate(180deg)
+    }
+
+    40% {
+        transform: rotate(270deg)
+    }
+
+    60% {
+        transform: rotate(360deg);
+        font-size: 300%;
+    }
+
+    80% {
+        transform: rotate(180deg)
+    }
+
+    100% {
+        transform: rotate(90deg)
+    }
+}
+
 h3 {
     color: #6daedf;
     font-family: "Lucida Console", "Courier New", monospace;
     font-size: 200%;
     text-align: center;
+    animation-name: tercero;
+    animation-delay: 1s;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+h3:hover {
+    color: orange;
 }
 
 header {
-    position: fixed
+    position: fixed;
 }
 
 #logotatis {
@@ -74,40 +122,73 @@ header {
 
 }
 
-.trabajadores{
-        color: #429639;
-        font-family: "Lucida Console", "Courier New", monospace;
+.trabajadores {
+    color: #429639;
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 /* INDEX - FOTO DE PAGINA PRINCIPAL*/
 
-.fotointro img{
+.fotointro img {
     width: 100%
 }
 
 /* INDEX - COMPRAR*/
 
-.comprar{
+@keyframes primero {
+    0% {
+        opacity: 0%
+    }
+
+    20% {
+        opacity: 40%
+    }
+
+    40% {
+        opacity: 80%
+    }
+
+    60% {
+        opacity: 100%;
+        font-size: 80px;
+    }
+
+    80% {
+        opacity: 60%
+    }
+
+    100% {
+        opacity: 40%
+    }
+}
+
+.comprar {
     font-family: "Lucida Console", "Courier New", monospace;
     text-align: center;
     font-weight: bold;
     font-size: 40px;
+    background-image: radial-gradient(purple, orange);
+    animation-name: primero;
+    animation-delay: 1s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
-.comprar p{
+.comprar p {
     color: white;
 }
 
-.comprar{
+.comprar {
     background-color: #429639;
 }
 
-.comprar :link{
+.comprar :link {
     color: white;
 }
 
-.comprar :visited{
-    color:white;
+.comprar :visited {
+    color: white;
 }
 
 /* INDEX - MAS TATI*/
@@ -118,18 +199,18 @@ header {
 }
 */
 
-.mastati :link{
+.mastati :link {
     color: white;
     font-family: "Lucida Console", "Courier New", monospace;
 }
 
-.mastati :visited{
+.mastati :visited {
     color: white;
     font-family: "Lucida Console", "Courier New", monospace;
 
 }
 
-.recetas{
+.recetas {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -171,23 +252,43 @@ footer :link {
 /*SHOP - POSTRES*/
 
 .ShopPostres {
-border: solid 2px #0081c7;
+    border: solid 2px #0081c7;
 
 }
 
 .ShopPostresItems {
     padding: 20px 0;
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+    animation: fadeIn 10s;
+    animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 
-.ShopPostresItems div img{
+.ShopPostresItems div img {
     width: 200px;
-    margin:10px 20px;
+    margin: 10px 20px;
     /*font-size: 50px;*/
+}
+
+.ShopFotoT1 img {
+    transform: skewX(-15deg);
+}
+
+.ShopFotoT2 img {
+    transform: skewX(15deg);
 }
 
 /*SHOP - EVENTOS*/
@@ -221,11 +322,11 @@ border: solid 2px #0081c7;
 
 form {
     font-family: "Lucida Console", "Courier New", monospace;
-    color: #429639; 
+    color: #429639;
 }
 
 input {
-    border: 3px #429639; 
+    border: 3px #429639;
     border-radius: 4;
 }
 
@@ -247,19 +348,19 @@ body {
     background-color: #d2dbe2;
 }
 
-.map-responsive{
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
 }
 
-.map-responsive iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
 
 /*INDEX GRID */
@@ -387,36 +488,37 @@ body {
 
 @media screen and (max-width:768px) {
 
-    .pagprincipal{
+    .pagprincipal {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(5, 0.1fr);
-        grid-template-areas: 
-        "navmenu navmenu"
-        "fotointro fotointro"
-        "comprar mastati"
-        "comentarios comentarios"
-        "footer footer";
+        grid-template-areas:
+            "navmenu navmenu"
+            "fotointro fotointro"
+            "comprar mastati"
+            "comentarios comentarios"
+            "footer footer";
     }
 
-    .navmenu{
+    .navmenu {
         padding-top: 100px;
         padding-right: 20px;
     }
 
-    .comprar{
+    .comprar {
         padding-top: 50px;
     }
 
-    .mastati{
+    .mastati {
         text-align: center;
         padding: 20px 20px
     }
 
-    .comentarios{
+    .comentarios {
         text-align: center;
     }
 }
-    /*
+
+/*
     .pagshop{
         grid-template-columns: 0.1fr 0.1fr;
         grid-template-rows: repeat(5, 0.1fr);
@@ -443,7 +545,7 @@ body {
 /*
 @media screen and (max-width:768px) {
 */
-    
+
 /*
     .comprar{
         padding-top: 50px;
@@ -462,40 +564,41 @@ body {
 
 
 /*INDEX CELULAR */
-@media screen and (max-width: 480px){
-    .pagprincipal{
+@media screen and (max-width: 480px) {
+    .pagprincipal {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 0.1fr);
-        grid-template-areas: 
-        "navmenu"
-        "fotointro"
-        "comprar" 
-        "mastati"
-        "comentarios"
-        "footer";
+        grid-template-areas:
+            "navmenu"
+            "fotointro"
+            "comprar"
+            "mastati"
+            "comentarios"
+            "footer";
     }
 
-    .navmenu{
+    .navmenu {
         padding-top: 150px;
         padding-right: 10px;
     }
 
-    .comprar{
+    .comprar {
         font-size: medium;
         padding: 15px;
     }
 
-    .mastati{
+    .mastati {
         text-align: center;
     }
 
-    .mastati p{
+    .mastati p {
         display: none;
     }
 
-    .comentarios{
+    .comentarios {
         text-align: center;
     }
+
     /*
     .pagshop{
         grid-template-columns: 1fr;
@@ -512,19 +615,17 @@ body {
         ;
     }
     */
-    
-    .ShopFotoT1{
-        display: none;
-        }
-    .ShopFotoT2{
-        display: none;
-        }
 
-    .footer{
+    .ShopFotoT1 {
+        display: none;
+    }
+
+    .ShopFotoT2 {
+        display: none;
+    }
+
+    .footer {
         padding-bottom: 10px;
     }
 
-    }
-
-
-
+}
