@@ -2,7 +2,8 @@ $titulos: (
         p: 18px,
         h1: 300%,
         h2: 200%,
-        h3: 150%
+        h3: 150%,
+        h5: 100%
 ); 
 
 @each $titulo, $fs in $titulos {
